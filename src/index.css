@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', monospace;
+  background-color: #E8EAF6;
+}
+.heading {
+  font-family: 'Dancing Script', cursive;
+}
+.bg_one{
+  background-color: #FAE5D3;
+}
+.bg_two{
+  background-color: #f69baa !important;
+}
+.bg_three{
+  background-color: #b978b3 !important;
+}
+.bg_four{
+  background-color: #7f7c7d;
+}
+.btn{
+  background-color: #4E342E !important;
+  font-family: 'Dancing Script', cursive !important;
+  color: white !important;
+  font-size: 20px !important;
+  border: none !important;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 20vmin;
+  width: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 10s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+
+
+/* common  */
+.center {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+.background {
+  background-color: #4E342E;
+}
+.bg {
+  background-color: #cbec95;
+}
+.boxShadow {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.linkHover {
+  font-family: 'Times New Roman', Times, serif;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #282c34;
+}
+.linkHover:hover{
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #282c34;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* progress bar  */
+
+.progress{
+  position: absolute;
+  background-color: #3498db;
+  transform:translateY(-50%);
+  border-radius: 5px;
+  height: 4px;
+  width: 50%;
+  z-index: -1;
+  transform: 0.4s ease;
+}
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #e0e0e0;
+  transition: 0.4s ease;
+}
+.circle.active{
+  border-color: #3498db;
+}
+
+/* progress bar  */
+.progressContainer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  align-items: center;
+  width: 400px;
+}
+.progressbar{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+}
+.progressbar::before{
+  content: "";
+  position: absolute;
+  background-color: #e0e0e0;
+  top: 50%;
+  transform:translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+  transform: 0.4s ease;
+}
+.progress-step{
+  height: 2.1875rem;
+  width: 2.1875rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress-step::before{
+  counter-increment: step;
+  content: counter(step);
+}
+.progress-step::after{
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+/* Scroll  */
+.catDiv {
+  width: 85%;
+  margin: auto;
+}
+
+.card {
+  position: absolute;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none !important;
+  padding: 10px;
+  width: 250px; 
+}
+.star{
+  width: 70px;
+  height: 70px;
+  position: relative;
+  left: 70%;
+  transform: translate(-5%, -150%); 
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 3rem;
+  background-color: #f69baa;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* scrollbar  */
+/* .custom-vertical-scrollbar {
+  height: 100vh !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 1.5rem;
+}
+
+.custom-vertical-scrollbar::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.custom-vertical-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4caf50; 
+  border-radius: 5px;
+}
+
+.custom-vertical-scrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1; 
+} */
+
+/* scrollbar y   */
+.custom-vertical-scrollbar {
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 1.5rem;
+}
+
+.custom-vertical-scrollbar::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.custom-vertical-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #FEF5E7; 
+  border-radius: 5px;
+}
+
+.custom-vertical-scrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1; 
+}
+/* scrollbar x   */
+.custom-horizontal-scrollbar {
+  height: 200px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin: 1.5rem;
+  display: flex;
+  background: #f0efef;
+}
+
+.custom-horizontal-scrollbar::-webkit-scrollbar {
+  width: 10px; 
+}
+
+.custom-horizontal-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #FEF5E7; 
+  border-radius: 5px;
+}
+
+.custom-horizontal-scrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1; 
+}
+
+.cartDiv {
+  width: 500px;
+  height: 600px !important;
+  background-image: linear-gradient(
+    to bottom,
+    #f69baa 0%,
+    #f69baa 50%,
+    rgb(247, 243, 243) 50%,
+    rgb(247, 243, 243) 100%
+    );
+    height: 70vh;
+    margin: auto;
+    padding-top: 100px;
+}
+.emptyCart {
+  width: 350px;
+  background-color: white;
+  margin: auto !important;
+}
+.sticky-bottom {
+  position: sticky;
+  bottom: 0;
+  width: 200px !important;
+  height: 80px !important;
+}
+.chatDiv {
+  height: 80vh;
+  width: 100vw;
+}
+.chatInput {
+  position: sticky;
+  bottom: 0;
+  margin: 10px 30px;
+  max-width: 35%;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.blinking-text {
+  animation: blink 3s infinite;
+  margin: auto;
+}
